@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "surface-tint": "#875129",
+              "secondary-fixed": "#fadfb8",
+              "on-secondary-fixed": "#271903",
+              "primary-fixed": "#ffdcc6",
+              "on-tertiary-fixed-variant": "#524436",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#d7c3b0",
+              "on-secondary-container": "#745f41",
+              "surface": "#fbf9f4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#ddc39d",
+              "primary-fixed-dim": "#ffb786",
+              "surface-dim": "#dbdad5",
+              "outline": "#84746a",
+              "on-tertiary-fixed": "#241a0e",
+              "tertiary": "#302518",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e2dd",
+              "inverse-on-surface": "#f2f1ec",
+              "on-secondary-fixed-variant": "#564427",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary": "#6f5b3d",
+              "on-background": "#1b1c19",
+              "background": "#fbf9f4",
+              "on-primary-container": "#db986a",
+              "surface-container-high": "#eae8e3",
+              "surface-bright": "#fbf9f4",
+              "inverse-surface": "#30312e",
+              "on-surface-variant": "#52443b",
+              "primary-container": "#5e300a",
+              "surface-container": "#f0eee9",
+              "on-primary-fixed": "#311400",
+              "on-tertiary-container": "#b6a492",
+              "on-surface": "#1b1c19",
+              "surface-container-low": "#f5f3ee",
+              "tertiary-container": "#473a2c",
+              "secondary-container": "#f7dcb5",
+              "inverse-primary": "#ffb786",
+              "outline-variant": "#d7c3b7",
+              "on-primary-fixed-variant": "#6b3a14",
+              "primary": "#411c00",
+              "surface-container-highest": "#e4e2dd",
+              "tertiary-fixed": "#f4dfcb",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .letterpress {
+            text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.3), -0.5px -0.5px 1px rgba(0,0,0,0.2);
+        }
+        .grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .paper-shadow {
+            box-shadow: 0px 24px 48px -12px rgba(94,48,10,0.08); /* Tailwind class was incorrectly written, replaced with raw CSS */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+<div class="grain fixed inset-0 z-[60]"></div>
+<!-- TopAppBar -->
+<nav class="bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl text-orange-950 dark:text-stone-100 docked full-width top-0 sticky z-50 no-border shadow-sm shadow-[0px_2px_15px_-3px_rgba(94,48,10,0.05)] flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-orange-950/70 cursor-pointer">menu</span>
+<span class="font-noto-serif italic tracking-tight text-xl font-bold tracking-[0.2em] text-orange-900 dark:text-stone-100 uppercase">WESTEND</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-orange-950/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="index.html">HOME</a>
+<a class="text-orange-950/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="rooms.html">ROOMS</a>
+<a class="text-orange-800 font-bold font-label text-xs tracking-widest" href="dining.html">DINING</a>
+<a class="text-orange-950/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="gallery.html">GALLERY</a>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2 text-xs font-bold tracking-widest hover:opacity-90 active:scale-95 duration-200 uppercase">BOOK NOW</button>
+</nav>
+<main class="relative overflow-hidden">
+<!-- Hero Section -->
+<section class="relative h-[751px] w-full flex items-center justify-center">
+<div class="absolute inset-0 bg-stone-900/20 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Luxurious poolside restaurant at dusk with warm lantern lighting reflected in the still water and lush forest surrounding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0nHl4cwGOygM4kFx7BATyzLdUedLjHpqABoaujX4sk9cBjEtuQ7tboKEtQy2VW-CFTEZvzpkUdIvlwZyxx-e24-BG7O1NjlI0yl82e46wN-VJ62Tw18RPNqqJ-sy69o6cseMugQVnfwXb5a35_Fi2RaVmMY16uvr-_4IdtJGP-yvjy9GW62AFQJ-YAfwJRnxzL4HbYwisfdtJJfM5MYpLL5aApfrQOTqIm9o7d9N9pWKj0pUYYdsulzp7RE4nWaVRvomiBP0GRA"/>
+<div class="relative z-20 text-center px-4 max-w-4xl">
+<span class="font-label text-on-primary uppercase tracking-[0.3em] mb-6 block drop-shadow-md">Est. 1898 — Matheran</span>
+<h1 class="font-headline text-5xl md:text-8xl text-white italic font-bold tracking-tight mb-8 drop-shadow-xl">Atmospheric Dining</h1>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 font-bold tracking-widest text-sm rounded-lg shadow-xl hover:translate-y-[-2px] transition-transform flex items-center gap-3">
+                        VIEW MENU <span class="material-symbols-outlined">menu_book</span>
+</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-4 font-bold tracking-widest text-sm rounded-lg hover:bg-white/20 transition-all uppercase">
+                        Book a Table
+                    </button>
+</div>
+</div>
+</section>
+<!-- Digital Stationery Menu (The "Slide-in" Visual Anchor) -->
+<section class="py-24 px-6 md:px-12 bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-5 space-y-12 sticky top-32">
+<div class="space-y-4">
+<h2 class="font-headline text-4xl text-primary italic letterpress">The Culinary Heritage</h2>
+<div class="w-16 h-1 bg-secondary"></div>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed text-lg">
+                        Our unique dining options – Sessions and Tonic Poolside dining have something to satisfy every taste and craving. Tickle your tastebuds with some of the best regional cuisine the hills have to offer. Enjoy your stay in a hotel which offers you a lot when it comes to comfort and luxury to pamper all your needs.
+                    </p>
+<!-- Reservation Card (Raised Minimalist) -->
+<div class="bg-surface-container-lowest p-10 rounded-xl shadow-[0px_24px_48px_-12px_rgba(94,48,10,0.12)] space-y-8 border-t border-white">
+<h3 class="font-headline text-2xl text-primary font-bold">Secure a Table</h3>
+<div class="space-y-4">
+<div>
+<label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Guest Count</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-sm focus:ring-secondary">
+<option>2 Guests</option>
+<option>4 Guests</option>
+<option>6+ Guests</option>
+</select>
+</div>
+<div>
+<label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Dining Time</label>
+<select class="w-full bg-surface-container-low border-none rounded-lg p-4 font-body text-sm focus:ring-secondary">
+<option>Breakfast (8 AM - 10 AM)</option>
+<option>Poolside Lunch (12 PM - 3 PM)</option>
+<option>Twilight Dinner (7 PM - 10 PM)</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-primary text-white py-5 rounded-lg font-bold tracking-widest text-sm shadow-lg hover:opacity-90 transition-opacity">REQUEST RESERVATION</button>
+</div>
+</div>
+<!-- Digital Menu Stationery -->
+<div class="lg:col-span-7">
+<div class="bg-white p-8 md:p-16 shadow-[0px_2px_40px_rgba(0,0,0,0.08)] relative border border-stone-200 transform rotate-1 lg:rotate-2">
+<div class="absolute inset-0 grain"></div>
+<div class="border-4 border-double border-secondary/20 p-8 md:p-12 h-full flex flex-col items-center text-center">
+<span class="font-headline text-secondary italic mb-4">Matheran Selection</span>
+<h2 class="font-noto-serif text-3xl font-bold tracking-[0.2em] text-primary uppercase mb-12">DINNER</h2>
+<div class="w-full space-y-12">
+<!-- Appetizers -->
+<div class="space-y-6">
+<h4 class="font-label text-xs tracking-[0.4em] text-secondary font-extrabold border-b border-secondary/10 pb-2">BEGINNINGS</h4>
+<div class="space-y-4">
+<div class="flex justify-between items-baseline gap-4">
+<div class="text-left">
+<h5 class="font-bold text-primary">Forest Mushroom Velouté</h5>
+<p class="text-xs text-on-surface-variant italic">Thyme-infused local cream, truffle droplets</p>
+</div>
+<span class="font-noto-serif text-primary">650</span>
+</div>
+<div class="flex justify-between items-baseline gap-4">
+<div class="text-left">
+<h5 class="font-bold text-primary">Charred Kokum Prawns</h5>
+<p class="text-xs text-on-surface-variant italic">Zesty local berries, coastal spice rub</p>
+</div>
+<span class="font-noto-serif text-primary">820</span>
+</div>
+</div>
+</div>
+<!-- Mains -->
+<div class="space-y-6">
+<h4 class="font-label text-xs tracking-[0.4em] text-secondary font-extrabold border-b border-secondary/10 pb-2">MAINS</h4>
+<div class="space-y-6">
+<div class="flex justify-between items-baseline gap-4">
+<div class="text-left">
+<h5 class="font-bold text-primary">Matheran Mutton Rassa</h5>
+<p class="text-xs text-on-surface-variant italic">Slow-cooked hill goat, hand-ground masala, amboli</p>
+</div>
+<span class="font-noto-serif text-primary">1,150</span>
+</div>
+<div class="flex justify-between items-baseline gap-4">
+<div class="text-left">
+<h5 class="font-bold text-primary">Truffle Dal Heritage</h5>
+<p class="text-xs text-on-surface-variant italic">Black lentils simmered for 24 hours over woodfire</p>
+</div>
+<span class="font-noto-serif text-primary">950</span>
+</div>
+<div class="flex justify-between items-baseline gap-4">
+<div class="text-left">
+<h5 class="font-bold text-primary">Vegetable Xacuti</h5>
+<p class="text-xs text-on-surface-variant italic">Seasonal farm vegetables in roasted coconut gravy</p>
+</div>
+<span class="font-noto-serif text-primary">850</span>
+</div>
+</div>
+</div>
+<!-- Signature -->
+<div class="bg-secondary-container/30 p-6 rounded-lg border border-secondary/10">
+<span class="font-label text-[10px] text-secondary-fixed-dim uppercase tracking-[0.2em] block mb-2">Signature Pairing</span>
+<h5 class="font-bold text-primary mb-1 italic">The Westend Mulled Nectar</h5>
+<p class="text-xs text-on-secondary-container">A secret blend of local spices and red wine, served warm</p>
+</div>
+</div>
+<div class="mt-16 flex items-center gap-4 text-secondary/30">
+<span class="h-px w-12 bg-secondary/30"></span>
+<span class="material-symbols-outlined text-sm">filter_vintage</span>
+<span class="h-px w-12 bg-secondary/30"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Highlights: Staggered Magazine Layout -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col gap-32">
+<!-- Eternia Spa -->
+<div class="relative grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-7 relative z-10 group">
+<div class="absolute -top-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
+<img class="w-full h-[500px] object-cover rounded-xl shadow-2xl grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700" data-alt="Interior of a luxury spa with warm wood accents, soft amber lighting, and white towels on stone massage tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8j2c2Be1ECtvVDmN-3-PjSkk0ZxmEbrGm7-VQW11KOQAp7IEHfOwA8R8OpizzFOufLJXop4pFEdsDuTZXxVZBPzB57qPzURw2pEdU25L21iCmC1qkChltp37ug_562JKa09HAnZztZe_OLFAK3mZcevc08B4CM8aCAxgCr3qj2hZQDH9vzOoMmvqqnDTCeKqeTQFA1ICSOAmPqK4yx8RAfOE8-bE5O2CZoB98DxtE4n2ZnZB9kUrw9gz_2-mhpJrY7KzaXZUQ3w"/>
+<div class="absolute -bottom-8 -right-8 w-1/2 p-10 bg-surface-container-highest shadow-2xl rounded-lg hidden lg:block border-t border-white/50">
+<h4 class="font-headline text-2xl text-primary italic mb-2">Experience Zen</h4>
+<p class="text-xs text-on-surface-variant font-body">Experience Tranquility • Experience Eternia</p>
+</div>
+</div>
+<div class="md:col-span-5 space-y-6 md:pl-12">
+<span class="font-label text-secondary tracking-[0.3em] font-bold">REJUVENATION</span>
+<h3 class="font-headline text-5xl text-primary leading-tight">Eternia Spa</h3>
+<p class="text-on-surface-variant leading-relaxed italic text-lg">
+                                Nestled within the quietest corner of our estate, Eternia offers a sanctuary where time stands still. From Ayurvedic rituals to modern hydrotherapy, every treatment is designed to echo the stillness of the mountain air.
+                            </p>
+<a class="inline-block text-primary font-bold tracking-widest text-sm border-b-2 border-secondary pb-1 hover:text-secondary transition-colors" href="#">DISCOVER WELLNESS</a>
+</div>
+</div>
+<!-- Local Forest Trails -->
+<div class="relative grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+<div class="md:col-span-5 order-2 md:order-1 space-y-6 md:pr-12 text-right">
+<span class="font-label text-secondary tracking-[0.3em] font-bold">EXPLORATION</span>
+<h3 class="font-headline text-5xl text-primary leading-tight">Whispering Trails</h3>
+<p class="text-on-surface-variant leading-relaxed italic text-lg">
+                                Matheran is one of the few places on earth where automobiles are prohibited. Step directly from our courtyard into the verdant embrace of forest trails that lead to Echo Point and Charlotte Lake.
+                            </p>
+<a class="inline-block text-primary font-bold tracking-widest text-sm border-b-2 border-secondary pb-1 hover:text-secondary transition-colors" href="#">MAP THE JOURNEY</a>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 relative group">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+<img class="w-full h-[500px] object-cover rounded-xl shadow-2xl group-hover:scale-[1.02] transition-transform duration-700" data-alt="Misty walking trail winding through a lush green tropical forest with tall trees and dense ferns" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMbC5R7iGde3ahiHqYjb-zDvfx4kaqJ2Zw_csjXvkPDJZaKMw99vJpqJf5pga4aGImTXJuFt8Ki9FEsClpXoB50XcHDw2u9xrZQhoTzbsIM04QydDhFT5oBf6I-dZcTzu6uRYpQIRCeleLYEAJhK0dwl09Vd9FaEyfIQzVqfx2XqREgCIHiduCAeKLVpEkxiJ3NIKpoDiJHyv0PZ6fr7fia9Ydu18uAoLMQqHcbZ4M0bFMHtqr37hIV7-_kkhlGo7wcLXGw7TtjQ"/>
+<!-- Overlap card -->
+<div class="absolute -top-10 -left-10 bg-white p-8 shadow-xl hidden lg:block transform -rotate-3 border border-stone-100">
+<span class="material-symbols-outlined text-secondary text-4xl block mb-2">directions_walk</span>
+<span class="font-label text-[10px] text-outline">GUIDED WALKS</span>
+<span class="block font-noto-serif font-bold text-primary mt-1">Daily 7:00 AM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Aesthetic Texture CTA -->
+<section class="py-24 px-6">
+<div class="max-w-5xl mx-auto bg-primary-container p-12 md:p-24 rounded-full overflow-hidden relative text-center">
+<div class="absolute inset-0 opacity-20 grain"></div>
+<div class="relative z-10 space-y-8">
+<h2 class="font-headline text-4xl md:text-6xl text-on-primary italic leading-tight">An evening of timeless elegance awaits.</h2>
+<p class="text-on-primary-container max-w-xl mx-auto font-body text-lg">We recommend booking your dinner table at least 24 hours in advance to secure the prime poolside locations.</p>
+<button class="bg-secondary text-on-secondary px-12 py-5 font-bold tracking-[0.2em] rounded-lg shadow-2xl hover:bg-secondary/90 transition-colors uppercase">RESERVE NOW</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 text-orange-950 dark:text-stone-300 w-full py-12 px-8 mt-auto tonal-transition-from-surface flat flex flex-col space-y-8 items-center text-center">
+<div class="space-y-2">
+<span class="font-noto-serif text-2xl font-bold tracking-[0.2em] text-orange-900 block">WESTEND</span>
+<span class="font-inter text-xs tracking-wider leading-loose uppercase text-center md:text-left">Copyright © 2026 Westend Hotel Matheran | Designed & Developed by: PerfectViewMedia</span>
+<div class="flex flex-wrap justify-center md:justify-start gap-4 md:gap-8 text-[10px] tracking-[0.15em] uppercase text-stone-600 font-bold mt-4">
+<a href="#" class="hover:text-orange-900 transition-colors">Disclaimer</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Terms &amp; Conditions</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Refund Policy</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Cancellation Policy</a>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="font-inter text-[10px] tracking-widest uppercase font-bold text-orange-900">Location</span>
+<span class="font-inter text-xs tracking-wider text-stone-600">R.C.Church Road, Next to Matheran Police Station<br>Matheran, Maharashtra 410102</span>
+</div>
+<div class="pt-8 border-t border-stone-200 dark:border-stone-800 w-full max-w-sm flex justify-center gap-6">
+<span class="material-symbols-outlined text-orange-900/50 cursor-pointer hover:text-orange-900">travel_explore</span>
+<span class="material-symbols-outlined text-orange-900/50 cursor-pointer hover:text-orange-900">spa</span>
+<span class="material-symbols-outlined text-orange-900/50 cursor-pointer hover:text-orange-900">pool</span>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full bg-stone-50 dark:bg-stone-900 flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-xl border-t border-orange-900/10 shadow-[0_-10px_30px_-15px_rgba(94,48,10,0.1)]">
+<a href="index.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-800 transition-colors">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">HOME</span>
+</a>
+<a href="rooms.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-800 transition-colors">
+<span class="material-symbols-outlined mb-1">bed</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">ROOMS</span>
+</a>
+<a href="dining.html" class="flex flex-col items-center justify-center text-orange-900 dark:text-orange-200 bg-stone-200/50 dark:bg-stone-800 rounded-xl px-3 py-1 translate-y-[-2px] transition-transform">
+<span class="material-symbols-outlined mb-1">restaurant</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">DINING</span>
+</a>
+<a href="gallery.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 hover:text-orange-800 transition-colors">
+<span class="material-symbols-outlined mb-1">photo_library</span>
+<span class="font-inter text-[10px] uppercase tracking-widest font-bold">GALLERY</span>
+</a>
+</div>
+<!-- Floating Contact Buttons -->
+<div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-[90] flex flex-col gap-4">
+    <a href="https://wa.me/919820012345" target="_blank" class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform group relative z-10">
+        <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">WhatsApp</span>
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.386 0 12.035c0 2.126.551 4.197 1.6 6.02L.034 23.996l6.095-1.598A11.96 11.96 0 0012.03 24c6.647 0 12.032-5.384 12.032-12.035S18.679 0 12.031 0zm.002 21.993c-1.802 0-3.564-.486-5.111-1.402l-.367-.217-3.791.994.995-3.69-.234-.374a9.927 9.927 0 01-1.554-5.31C1.97 6.452 6.449 1.972 12.033 1.972c5.584 0 10.063 4.48 10.063 10.065 0 5.586-4.48 10.065-10.063 10.065z"/><path d="M17.514 14.192c-.302-.151-1.78-.88-2.056-.98-.276-.1-.476-.151-.676.151-.201.301-.776.98-.952 1.18-.175.2-.35.226-.653.076-1.5-.751-2.613-1.638-3.616-3.085-.258-.372.253-.346.84-.925.151-.15.302-.349.452-.525.151-.176.201-.301.302-.501.1-.2.05-.375-.025-.525-.075-.152-.676-1.628-.925-2.227-.243-.585-.491-.505-.676-.514-.176-.008-.376-.008-.577-.008s-.525.076-.801.376c-.276.3-.952.924-.952 2.254s.977 2.611 1.127 2.811c.151.201 1.914 2.923 4.634 4.097 1.83 1.042 2.508.889 3.01.738.647-.193 1.78-.727 2.03-1.428.252-.7.252-1.302.177-1.428-.076-.126-.276-.201-.577-.352z"/></svg>
+    </a>
+    <a href="tel:+919820012345" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-[0px_10px_20px_rgba(65,28,0,0.3)] hover:-translate-y-1 transition-transform group relative border border-secondary/20 z-10">
+        <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">Call Us</span>
+        <span class="material-symbols-outlined text-xl">call</span>
+    </a>
+</div>
+</body></html>

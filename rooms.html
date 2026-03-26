@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "surface-tint": "#875129",
+              "secondary-fixed": "#fadfb8",
+              "on-secondary-fixed": "#271903",
+              "primary-fixed": "#ffdcc6",
+              "on-tertiary-fixed-variant": "#524436",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#d7c3b0",
+              "on-secondary-container": "#745f41",
+              "surface": "#fbf9f4",
+              "error": "#ba1a1a",
+              "secondary-fixed-dim": "#ddc39d",
+              "primary-fixed-dim": "#ffb786",
+              "surface-dim": "#dbdad5",
+              "outline": "#84746a",
+              "on-tertiary-fixed": "#241a0e",
+              "tertiary": "#302518",
+              "on-tertiary": "#ffffff",
+              "surface-variant": "#e4e2dd",
+              "inverse-on-surface": "#f2f1ec",
+              "on-secondary-fixed-variant": "#564427",
+              "on-secondary": "#ffffff",
+              "on-error-container": "#93000a",
+              "secondary": "#6f5b3d",
+              "on-background": "#1b1c19",
+              "background": "#fbf9f4",
+              "on-primary-container": "#db986a",
+              "surface-container-high": "#eae8e3",
+              "surface-bright": "#fbf9f4",
+              "inverse-surface": "#30312e",
+              "on-surface-variant": "#52443b",
+              "primary-container": "#5e300a",
+              "surface-container": "#f0eee9",
+              "on-primary-fixed": "#311400",
+              "on-tertiary-container": "#b6a492",
+              "on-surface": "#1b1c19",
+              "surface-container-low": "#f5f3ee",
+              "tertiary-container": "#473a2c",
+              "secondary-container": "#f7dcb5",
+              "inverse-primary": "#ffb786",
+              "outline-variant": "#d7c3b7",
+              "on-primary-fixed-variant": "#6b3a14",
+              "primary": "#411c00",
+              "surface-container-highest": "#e4e2dd",
+              "tertiary-fixed": "#f4dfcb",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .noise-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .letterpress {
+            text-shadow: 0px 1px 1px rgba(255,255,255,0.5), 0px -1px 1px rgba(0,0,0,0.2);
+        }
+        .debossed-icon {
+            filter: drop-shadow(0px 1px 0px rgba(255,255,255,0.8));
+            color: #5E300A;
+            opacity: 0.8;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<div class="noise-overlay fixed inset-0 z-[100]"></div>
+<!-- TopAppBar -->
+<header class="bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl text-orange-950 dark:text-stone-100 docked full-width top-0 sticky z-50 no-border shadow-[0px_2px_15px_-3px_rgba(94,48,10,0.05)]">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-orange-950/70 cursor-pointer hover:opacity-80 transition-opacity">menu</span>
+<h1 class="text-xl font-bold tracking-[0.2em] text-orange-900 dark:text-stone-100 font-noto-serif italic tracking-tight">WESTEND</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-orange-950/70 font-inter text-xs tracking-widest hover:opacity-80 transition-opacity" href="index.html">HOME</a>
+<a class="text-orange-800 font-bold font-inter text-xs tracking-widest hover:opacity-80 transition-opacity" href="rooms.html">ROOMS</a>
+<a class="text-orange-950/70 font-inter text-xs tracking-widest hover:opacity-80 transition-opacity" href="dining.html">DINING</a>
+<a class="text-orange-950/70 font-inter text-xs tracking-widest hover:opacity-80 transition-opacity" href="gallery.html">GALLERY</a>
+</nav>
+<button class="bg-primary px-6 py-2 text-on-primary text-[10px] font-bold tracking-widest active:scale-95 duration-200 transition-all shadow-sm">BOOK NOW</button>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12 lg:py-24">
+<!-- Hero Section -->
+<section class="mb-24 text-center lg:text-left">
+<p class="font-label text-secondary uppercase tracking-[0.3em] mb-4 text-[10px]">Private Sanctuary Since 1898</p>
+<h2 class="font-headline text-5xl lg:text-7xl text-primary leading-tight mb-8">Our Rooms <br class="hidden lg:block"/> &amp; Suites</h2>
+<div class="w-24 h-px bg-secondary-container mx-auto lg:ml-0 mb-8"></div>
+<p class="font-body text-on-surface-variant text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-4">
+Explore our luxurious selections spanning: Deluxe Rooms, Super Deluxe Rooms, Luxury Rooms, Deluxe Family Rooms, Heritage Family Rooms, and private Cottages.
+</p>
+</section>
+<!-- Sticky Filter -->
+<div class="sticky top-[72px] z-40 bg-background/95 backdrop-blur-md py-6 mb-16 border-b border-outline-variant/15 overflow-x-auto">
+<div class="flex gap-12 items-center justify-center lg:justify-start whitespace-nowrap px-4">
+<button class="font-label text-xs tracking-[0.2em] text-primary border-b-2 border-primary pb-2">ALL ACCOMMODATION</button>
+<button class="font-label text-xs tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">DELUXE ROOMS</button>
+<button class="font-label text-xs tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">LUXURY SUITES</button>
+<button class="font-label text-xs tracking-[0.2em] text-on-surface-variant hover:text-primary transition-colors">HERITAGE WING</button>
+</div>
+</div>
+<!-- Room Grid (Symmetric Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+    <!-- Card 1 -->
+    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] hover:-translate-y-2 transition-transform duration-500 relative flex flex-col h-full border-t border-outline-variant/20 group">
+        <div class="aspect-[4/3] w-full rounded-lg mb-6 overflow-hidden relative">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-110" alt="AC Normal Room" src="room1.png"/>
+            <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+        </div>
+        <div class="flex flex-col flex-grow">
+            <span class="font-label text-[10px] tracking-widest text-secondary mb-3 uppercase">AC Room 2 bed</span>
+            <h4 class="font-headline text-2xl text-primary mb-2">AC Normal Room<br><span class="text-lg italic text-primary/80">(2 Beds)</span></h4>
+            <div class="font-noto-serif text-xl font-bold text-primary mb-6">₹1,650 <span class="font-body text-xs text-on-surface-variant font-normal">/ Night</span></div>
+            <p class="font-body text-on-surface-variant text-sm flex-grow mb-8 leading-relaxed">Air-conditioned room with 2 beds, 24/7 hot water, and clean linens. Ideal for couples and small families visiting the temple.</p>
+            <a href="rooms.html" class="mt-auto block text-center w-full bg-surface-container-highest ghost-border text-primary py-4 font-label text-xs font-bold tracking-[0.2em] shadow-inner hover:bg-surface-variant transition-colors active:scale-95 uppercase">Check Availability</a>
+        </div>
+    </div>
+    
+    <!-- Card 2 (Top Choice) -->
+    <div class="bg-surface-container-highest p-6 rounded-xl shadow-[0px_24px_48px_-12px_rgba(94,48,10,0.1)] hover:-translate-y-2 transition-transform duration-500 relative flex flex-col h-full ring-1 ring-secondary/30 group">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-on-secondary px-6 py-1.5 rounded-full font-label text-[10px] tracking-widest uppercase shadow-md flex items-center gap-1 z-20"><span class="material-symbols-outlined text-[12px]">star</span> Top Choice</div>
+        <div class="aspect-[4/3] w-full rounded-lg mb-6 overflow-hidden relative">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-110" alt="AC Family Suite" src="room2.png"/>
+            <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+        </div>
+        <div class="flex flex-col flex-grow">
+            <span class="font-label text-[10px] tracking-widest text-secondary mb-3 uppercase mt-2 block">AC Family Suite</span>
+            <h4 class="font-headline text-2xl text-primary mb-2">AC Family Suite</h4>
+            <div class="font-noto-serif text-xl font-bold text-primary mb-6">₹2,445 <span class="font-body text-xs text-on-surface-variant font-normal">/ Night</span></div>
+            <p class="font-body text-on-surface-variant text-sm flex-grow mb-8 leading-relaxed">Our premium AC family room with the best comfort, extra space, and serene views — perfect for a peaceful spiritual retreat.</p>
+            <a href="rooms.html" class="mt-auto block text-center w-full bg-secondary-container text-on-secondary-container py-4 font-label text-xs font-bold tracking-[0.2em] shadow-sm hover:bg-secondary-fixed transition-colors active:scale-95 uppercase mt-auto">Check Availability</a>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] hover:-translate-y-2 transition-transform duration-500 relative flex flex-col h-full border-t border-outline-variant/20 group">
+        <div class="aspect-[4/3] w-full rounded-lg mb-6 overflow-hidden relative">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter contrast-110" alt="AC Hall Room" src="room3.png"/>
+            <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+        </div>
+        <div class="flex flex-col flex-grow">
+            <span class="font-label text-[10px] tracking-widest text-secondary mb-3 uppercase">AC Hall Room for Groups</span>
+            <h4 class="font-headline text-2xl text-primary mb-2">AC Hall Room<br><span class="text-lg italic text-primary/80">(4+ Beds)</span></h4>
+            <div class="font-noto-serif text-xl font-bold text-primary mb-6">₹2,500 <span class="font-body text-xs text-on-surface-variant font-normal">/ Night</span></div>
+            <p class="font-body text-on-surface-variant text-sm flex-grow mb-8 leading-relaxed">Spacious hall room perfect for group stays and large families traveling together.</p>
+            <a href="rooms.html" class="mt-auto block text-center w-full bg-surface-container-highest ghost-border text-primary py-4 font-label text-xs font-bold tracking-[0.2em] shadow-inner hover:bg-surface-variant transition-colors active:scale-95 uppercase">Check Availability</a>
+        </div>
+    </div>
+
+</div>
+<!-- Experience Callout -->
+<section class="mt-32 p-12 lg:p-24 bg-surface-container-lowest border border-outline-variant/10 text-center relative overflow-hidden">
+<div class="relative z-10 max-w-2xl mx-auto">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8">spa</span>
+<h2 class="font-headline text-4xl text-primary mb-6">A Legacy of Rest</h2>
+<p class="text-on-surface-variant leading-loose mb-12 italic text-lg">"Every room at Westend is a testament to the art of slowing down. We have purposefully avoided television sets in most wings to ensure the only soundtrack you hear is the mountain breeze."</p>
+<button class="bg-primary text-on-primary px-10 py-4 font-label text-xs tracking-[0.3em] hover:bg-primary-container transition-all">DISCOVER THE GROUNDS</button>
+</div>
+<!-- Absolute background decoration -->
+<div class="absolute top-0 right-0 opacity-5 -translate-y-1/2 translate-x-1/2">
+<span class="material-symbols-outlined text-[400px]">filter_vintage</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 text-orange-950 dark:text-stone-300 w-full py-12 px-8 mt-auto tonal-transition-from-surface flex flex-col space-y-8 items-center text-center">
+<div class="font-noto-serif text-lg tracking-widest text-orange-900">WESTEND HOTEL</div>
+<div class="flex flex-col items-center gap-2">
+<span class="font-inter text-[10px] tracking-widest uppercase font-bold text-orange-900">Location</span>
+<span class="font-inter text-xs tracking-wider text-stone-600">R.C.Church Road, Next to Matheran Police Station<br>Matheran, Maharashtra 410102</span>
+</div>
+<div class="flex flex-col items-center gap-6 pb-4">
+<div class="text-[10px] tracking-[0.2em] text-stone-500 font-bold uppercase text-center leading-loose">Copyright © 2026 Westend Hotel Matheran | Designed & Developed by: PerfectViewMedia</div>
+<div class="flex flex-wrap justify-center gap-4 md:gap-8 text-[10px] tracking-[0.15em] uppercase text-stone-500 font-bold">
+<a href="#" class="hover:text-orange-900 transition-colors">Disclaimer</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Terms &amp; Conditions</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Refund Policy</a>
+<a href="#" class="hover:text-orange-900 transition-colors">Cancellation Policy</a>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-stone-50 dark:bg-stone-900 flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-xl border-t border-orange-900/10 shadow-[0_-10px_30px_-15px_rgba(94,48,10,0.1)]">
+<a href="index.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 group cursor-pointer">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-inter text-[8px] uppercase tracking-widest font-bold">HOME</span>
+</a>
+<a href="rooms.html" class="flex flex-col items-center justify-center text-orange-900 dark:text-orange-200 bg-stone-200/50 dark:bg-stone-800 rounded-xl px-3 py-1 group cursor-pointer translate-y-[-2px]">
+<span class="material-symbols-outlined mb-1">bed</span>
+<span class="font-inter text-[8px] uppercase tracking-widest font-bold">ROOMS</span>
+</a>
+<a href="dining.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 group cursor-pointer">
+<span class="material-symbols-outlined mb-1">restaurant</span>
+<span class="font-inter text-[8px] uppercase tracking-widest font-bold">DINING</span>
+</a>
+<a href="gallery.html" class="flex flex-col items-center justify-center text-stone-400 dark:text-stone-500 group cursor-pointer">
+<span class="material-symbols-outlined mb-1">photo_library</span>
+<span class="font-inter text-[8px] uppercase tracking-widest font-bold">GALLERY</span>
+</a>
+</nav>
+<!-- Floating Contact Buttons -->
+<div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-[90] flex flex-col gap-4">
+    <a href="https://wa.me/919820012345" target="_blank" class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform group relative z-10">
+        <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">WhatsApp</span>
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.386 0 12.035c0 2.126.551 4.197 1.6 6.02L.034 23.996l6.095-1.598A11.96 11.96 0 0012.03 24c6.647 0 12.032-5.384 12.032-12.035S18.679 0 12.031 0zm.002 21.993c-1.802 0-3.564-.486-5.111-1.402l-.367-.217-3.791.994.995-3.69-.234-.374a9.927 9.927 0 01-1.554-5.31C1.97 6.452 6.449 1.972 12.033 1.972c5.584 0 10.063 4.48 10.063 10.065 0 5.586-4.48 10.065-10.063 10.065z"/><path d="M17.514 14.192c-.302-.151-1.78-.88-2.056-.98-.276-.1-.476-.151-.676.151-.201.301-.776.98-.952 1.18-.175.2-.35.226-.653.076-1.5-.751-2.613-1.638-3.616-3.085-.258-.372.253-.346.84-.925.151-.15.302-.349.452-.525.151-.176.201-.301.302-.501.1-.2.05-.375-.025-.525-.075-.152-.676-1.628-.925-2.227-.243-.585-.491-.505-.676-.514-.176-.008-.376-.008-.577-.008s-.525.076-.801.376c-.276.3-.952.924-.952 2.254s.977 2.611 1.127 2.811c.151.201 1.914 2.923 4.634 4.097 1.83 1.042 2.508.889 3.01.738.647-.193 1.78-.727 2.03-1.428.252-.7.252-1.302.177-1.428-.076-.126-.276-.201-.577-.352z"/></svg>
+    </a>
+    <a href="tel:+919820012345" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-[0px_10px_20px_rgba(65,28,0,0.3)] hover:-translate-y-1 transition-transform group relative border border-secondary/20 z-10">
+        <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">Call Us</span>
+        <span class="material-symbols-outlined text-xl">call</span>
+    </a>
+</div>
+</body></html>
