@@ -191,7 +191,7 @@
 </div>
 <div class="flex flex-col gap-2">
 <span class="font-bold text-primary uppercase text-[10px] tracking-[0.2em]">Call Us</span>
-<p class="text-stone-600">+91 2148 230 240<br/>+91 98200 12345</p>
+<p class="text-stone-600">+91 2148 230 240<br/>+91 81989 28659</p>
 </div>
 <div class="flex flex-col gap-2">
 <span class="font-bold text-primary uppercase text-[10px] tracking-[0.2em]">Email</span>
@@ -240,13 +240,85 @@ Copyright © 2026 Westend Hotel Matheran | Designed & Developed by: PerfectViewM
 </nav>
 <!-- Floating Contact Buttons -->
 <div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-[90] flex flex-col gap-4">
-    <a href="https://wa.me/919820012345" target="_blank" class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform group relative z-10">
+    <a href="https://wa.me/918198928659" target="_blank" class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform group relative z-10">
         <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">WhatsApp</span>
         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.386 0 12.035c0 2.126.551 4.197 1.6 6.02L.034 23.996l6.095-1.598A11.96 11.96 0 0012.03 24c6.647 0 12.032-5.384 12.032-12.035S18.679 0 12.031 0zm.002 21.993c-1.802 0-3.564-.486-5.111-1.402l-.367-.217-3.791.994.995-3.69-.234-.374a9.927 9.927 0 01-1.554-5.31C1.97 6.452 6.449 1.972 12.033 1.972c5.584 0 10.063 4.48 10.063 10.065 0 5.586-4.48 10.065-10.063 10.065z"/><path d="M17.514 14.192c-.302-.151-1.78-.88-2.056-.98-.276-.1-.476-.151-.676.151-.201.301-.776.98-.952 1.18-.175.2-.35.226-.653.076-1.5-.751-2.613-1.638-3.616-3.085-.258-.372.253-.346.84-.925.151-.15.302-.349.452-.525.151-.176.201-.301.302-.501.1-.2.05-.375-.025-.525-.075-.152-.676-1.628-.925-2.227-.243-.585-.491-.505-.676-.514-.176-.008-.376-.008-.577-.008s-.525.076-.801.376c-.276.3-.952.924-.952 2.254s.977 2.611 1.127 2.811c.151.201 1.914 2.923 4.634 4.097 1.83 1.042 2.508.889 3.01.738.647-.193 1.78-.727 2.03-1.428.252-.7.252-1.302.177-1.428-.076-.126-.276-.201-.577-.352z"/></svg>
     </a>
-    <a href="tel:+919820012345" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-[0px_10px_20px_rgba(65,28,0,0.3)] hover:-translate-y-1 transition-transform group relative border border-secondary/20 z-10">
+    <a href="tel:+918198928659" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-[0px_10px_20px_rgba(65,28,0,0.3)] hover:-translate-y-1 transition-transform group relative border border-secondary/20 z-10">
         <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">Call Us</span>
         <span class="material-symbols-outlined text-xl">call</span>
     </a>
 </div>
+
+<!-- Booking Enquiry Modal -->
+<div id="bookingModal" class="fixed inset-0 z-[100] flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 bg-stone-900/80 backdrop-blur-sm modal-overlay"></div>
+    <div class="bg-surface-container-lowest w-full max-w-lg p-8 md:p-12 rounded-xl shadow-2xl relative z-10 transform scale-95 transition-transform duration-300 modal-content border border-outline-variant/20 mx-4">
+        <button id="closeModal" class="absolute top-6 right-6 text-on-surface-variant hover:text-primary transition-colors">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <span class="font-label text-[10px] tracking-widest text-secondary mb-2 block uppercase text-center">Westend Resort</span>
+        <h3 class="font-headline text-3xl text-primary mb-8 text-center">Reservation Enquiry</h3>
+        
+        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Enquiry Submitted Successfully! We will contact you shortly.'); document.getElementById('bookingModal').classList.add('hidden');">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Check-in</label>
+                    <input type="date" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
+                </div>
+                <div>
+                    <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Check-out</label>
+                    <input type="date" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
+                </div>
+            </div>
+            <div>
+                <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Number of Guests</label>
+                <select required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer">
+                    <option value="" disabled selected>Select guests</option>
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4+ Guests</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-primary text-on-primary py-5 rounded-lg font-bold tracking-[0.2em] text-xs shadow-lg hover:opacity-90 transition-opacity uppercase mt-4">Submit Enquiry</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('bookingModal');
+        const closeBtn = document.getElementById('closeModal');
+        const overlay = modal.querySelector('.modal-overlay');
+        
+        // Find all Book Now / Check Availability buttons
+        const bookButtons = document.querySelectorAll('button, a');
+        bookButtons.forEach(btn => {
+            if(btn.textContent.toLowerCase().includes('book now') || btn.textContent.toLowerCase().includes('check availability')) {
+                if(btn.tagName === 'A') btn.href = "javascript:void(0)";
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    modal.classList.remove('hidden');
+                    // Small delay for CSS transition to trigger
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0');
+                        modal.querySelector('.modal-content').classList.remove('scale-95');
+                    }, 10);
+                });
+            }
+        });
+
+        const closeModal = () => {
+            modal.classList.add('opacity-0');
+            modal.querySelector('.modal-content').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+    });
+</script>
 </body></html>
