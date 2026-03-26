@@ -250,20 +250,20 @@ Explore our luxurious selections spanning: Deluxe Rooms, Super Deluxe Rooms, Lux
         <span class="font-label text-[10px] tracking-widest text-secondary mb-2 block uppercase text-center">Westend Resort</span>
         <h3 class="font-headline text-3xl text-primary mb-8 text-center">Reservation Enquiry</h3>
         
-        <form class="space-y-6" onsubmit="event.preventDefault(); alert('Enquiry Submitted Successfully! We will contact you shortly.'); document.getElementById('bookingModal').classList.add('hidden');">
+        <form id="enquiryForm" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Check-in</label>
-                    <input type="date" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
+                    <input type="date" id="checkinDate" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
                 </div>
                 <div>
                     <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Check-out</label>
-                    <input type="date" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
+                    <input type="date" id="checkoutDate" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer"/>
                 </div>
             </div>
             <div>
                 <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Number of Guests</label>
-                <select required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer">
+                <select id="guestCount" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer">
                     <option value="" disabled selected>Select guests</option>
                     <option>1 Guest</option>
                     <option>2 Guests</option>
@@ -271,7 +271,7 @@ Explore our luxurious selections spanning: Deluxe Rooms, Super Deluxe Rooms, Lux
                     <option>4+ Guests</option>
                 </select>
             </div>
-            <button type="submit" class="w-full bg-primary text-on-primary py-5 rounded-lg font-bold tracking-[0.2em] text-xs shadow-lg hover:opacity-90 transition-opacity uppercase mt-4">Submit Enquiry</button>
+            <button type="submit" class="w-full bg-primary text-on-primary py-5 rounded-lg font-bold tracking-[0.2em] text-xs shadow-lg hover:opacity-90 transition-opacity uppercase mt-4">Start WhatsApp Enquiry <span class="material-symbols-outlined align-middle ml-2 text-sm">send</span></button>
         </form>
     </div>
 </div>
@@ -281,6 +281,7 @@ Explore our luxurious selections spanning: Deluxe Rooms, Super Deluxe Rooms, Lux
         const modal = document.getElementById('bookingModal');
         const closeBtn = document.getElementById('closeModal');
         const overlay = modal.querySelector('.modal-overlay');
+        const enquiryForm = document.getElementById('enquiryForm');
         
         // Find all Book Now / Check Availability buttons
         const bookButtons = document.querySelectorAll('button, a');
@@ -309,6 +310,20 @@ Explore our luxurious selections spanning: Deluxe Rooms, Super Deluxe Rooms, Lux
 
         closeBtn.addEventListener('click', closeModal);
         overlay.addEventListener('click', closeModal);
+
+        // Handle WhatsApp submission
+        enquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const checkin = document.getElementById('checkinDate').value;
+            const checkout = document.getElementById('checkoutDate').value;
+            const guests = document.getElementById('guestCount').value;
+            
+            const message = `Hello Westend Hotel! I would like to make a reservation enquiry.%0A%0A*Check-in:* ${checkin}%0A*Check-out:* ${checkout}%0A*Guests:* ${guests}%0A%0APlease let me know the availability and pricing.`;
+            
+            window.open(`https://wa.me/918198928659?text=${message}`, '_blank');
+            closeModal();
+            enquiryForm.reset();
+        });
     });
 </script>
 </body></html>
