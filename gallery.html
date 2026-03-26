@@ -261,6 +261,10 @@ Copyright © 2026 Westend Hotel Matheran | Designed & Developed by: PerfectViewM
         <h3 class="font-headline text-3xl text-primary mb-8 text-center">Reservation Enquiry</h3>
         
         <form id="enquiryForm" class="space-y-6">
+            <div>
+                <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Full Name</label>
+                <input type="text" id="userName" required placeholder="John Doe" class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary placeholder:text-outline-variant/50"/>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                     <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Check-in</label>
@@ -324,11 +328,12 @@ Copyright © 2026 Westend Hotel Matheran | Designed & Developed by: PerfectViewM
         // Handle WhatsApp submission
         enquiryForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            const name = document.getElementById('userName').value;
             const checkin = document.getElementById('checkinDate').value;
             const checkout = document.getElementById('checkoutDate').value;
             const guests = document.getElementById('guestCount').value;
             
-            const message = `Hello Westend Hotel! I would like to make a reservation enquiry.%0A%0A*Check-in:* ${checkin}%0A*Check-out:* ${checkout}%0A*Guests:* ${guests}%0A%0APlease let me know the availability and pricing.`;
+            const message = `Hello Westend Hotel! I would like to make a reservation enquiry.%0A%0A*Name:* ${name}%0A*Check-in:* ${checkin}%0A*Check-out:* ${checkout}%0A*Guests:* ${guests}%0A%0APlease let me know the availability and pricing.`;
             
             window.open(`https://wa.me/918198928659?text=${message}`, '_blank');
             closeModal();
