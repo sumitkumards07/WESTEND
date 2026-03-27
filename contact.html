@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Sonu - Authorized Partner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary": "#ffffff",
+              "surface-tint": "#875129",
+              "secondary-fixed": "#fadfb8",
+              "on-secondary-fixed": "#271903",
+              "primary-fixed": "#ffdcc6",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#745f41",
+              "surface": "#fbf9f4",
+              "secondary-fixed-dim": "#ddc39d",
+              "primary-fixed-dim": "#ffb786",
+              "surface-dim": "#dbdad5",
+              "outline": "#84746a",
+              "secondary": "#6f5b3d",
+              "on-background": "#1b1c19",
+              "background": "#fbf9f4",
+              "on-primary-container": "#db986a",
+              "surface-container-high": "#eae8e3",
+              "on-surface-variant": "#52443b",
+              "primary-container": "#5e300a",
+              "surface-container": "#f0eee9",
+              "on-surface": "#1b1c19",
+              "surface-container-low": "#f5f3ee",
+              "secondary-container": "#f7dcb5",
+              "outline-variant": "#d7c3b7",
+              "primary": "#411c00",
+              "surface-container-highest": "#e4e2dd",
+              "on-error": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+        body { min-height: max(884px, 100dvh); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .grain {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .letterpress { text-shadow: 0.5px 0.5px 1px rgba(255,255,255,0.3), -0.5px -0.5px 1px rgba(0,0,0,0.2); }
+        .glass-header { backdrop-filter: blur(20px); background: rgba(251, 249, 244, 0.8); }
+        .ghost-border { outline: 1px solid rgba(215, 195, 183, 0.15); }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container">
+    <div class="grain fixed inset-0 z-[60]"></div>
+    
+    <!-- TopAppBar -->
+    <nav class="glass-header text-primary docked full-width top-0 sticky z-50 shadow-sm shadow-[0px_2px_15px_-3px_rgba(94,48,10,0.05)] flex justify-between items-center px-6 py-4 w-full">
+        <div class="flex items-center gap-4">
+            <span class="material-symbols-outlined text-primary/70 cursor-pointer">menu</span>
+            <span class="font-headline italic tracking-tight text-xl font-bold tracking-[0.2em] text-primary uppercase">WESTEND</span>
+            <span class="bg-secondary/10 text-secondary px-2 py-0.5 text-[8px] font-bold tracking-widest uppercase rounded-sm border border-secondary/20 hidden sm:inline">Authorized Partner</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a class="text-primary/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="index.html">HOME</a>
+            <a class="text-primary/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="rooms.html">ROOMS</a>
+            <a class="text-primary/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="dining.html">DINING</a>
+            <a class="text-primary/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="gallery.html">GALLERY</a>
+            <a class="text-primary/70 hover:opacity-80 transition-opacity font-label text-xs tracking-widest" href="about.html">ABOUT</a>
+            <a class="text-primary font-bold font-label text-xs tracking-widest border-b-2 border-primary pb-1" href="contact.html">CONTACT</a>
+        </div>
+        <button class="bg-primary text-on-primary px-5 py-2 text-xs font-bold tracking-widest hover:opacity-90 active:scale-95 duration-200 uppercase rounded-sm">BOOK NOW</button>
+    </nav>
+
+    <main class="relative overflow-hidden">
+        <!-- Hero -->
+        <section class="relative py-32 px-6 md:px-12 bg-surface">
+            <div class="max-w-4xl mx-auto text-center space-y-12">
+                <span class="font-label text-secondary tracking-[0.3em] font-bold text-xs uppercase">Get In Touch</span>
+                <h1 class="font-headline text-5xl md:text-7xl text-primary leading-tight letterpress italic">Contact Us</h1>
+                <div class="w-24 h-px bg-secondary mx-auto"></div>
+                <p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
+                    Have a question about your booking or need travel assistance? We're here to help. Reach out to us through any of the channels below.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Cards + Form -->
+        <section class="py-24 px-6 md:px-12 bg-surface-container-low">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Info Cards -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <span class="font-label text-secondary tracking-[0.3em] font-bold text-xs uppercase">Reach Us</span>
+                        <h2 class="font-headline text-4xl text-primary italic">We'd Love to Hear From You</h2>
+                        <div class="w-16 h-px bg-secondary"></div>
+                    </div>
+
+                    <!-- Contact Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <a href="tel:+918198928659" class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] border-t border-outline-variant/20 space-y-4 hover:-translate-y-2 transition-transform duration-500 block">
+                            <span class="material-symbols-outlined text-3xl text-secondary">call</span>
+                            <h4 class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">Phone</h4>
+                            <p class="text-on-surface-variant text-sm">+91 8198928659</p>
+                        </a>
+                        <a href="https://wa.me/918198928659" target="_blank" class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] border-t border-outline-variant/20 space-y-4 hover:-translate-y-2 transition-transform duration-500 block">
+                            <span class="material-symbols-outlined text-3xl text-[#25D366]">chat</span>
+                            <h4 class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">WhatsApp</h4>
+                            <p class="text-on-surface-variant text-sm">Chat with us instantly</p>
+                        </a>
+                        <a href="mailto:support@westendmatheran.com" class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] border-t border-outline-variant/20 space-y-4 hover:-translate-y-2 transition-transform duration-500 block">
+                            <span class="material-symbols-outlined text-3xl text-secondary">mail</span>
+                            <h4 class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">Email</h4>
+                            <p class="text-on-surface-variant text-sm">support@westendmatheran.com</p>
+                        </a>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] border-t border-outline-variant/20 space-y-4">
+                            <span class="material-symbols-outlined text-3xl text-secondary">schedule</span>
+                            <h4 class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">Hours</h4>
+                            <p class="text-on-surface-variant text-sm">Mon – Sun: 8 AM – 10 PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Agency Address -->
+                    <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_-10px_rgba(94,48,10,0.06)] border-t border-outline-variant/20 space-y-4">
+                        <span class="material-symbols-outlined text-3xl text-secondary">location_on</span>
+                        <h4 class="font-label text-[10px] tracking-widest text-primary uppercase font-bold">Hotel Location (Westend Hotel)</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">R.C.Church Road, Next to Matheran Police Station<br>Matheran, Maharashtra 410102</p>
+                        <p class="text-on-surface-variant text-xs italic mt-2">Booking managed by Sonu — Independent Travel Agency</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-[0px_24px_48px_-12px_rgba(94,48,10,0.08)] border-t border-outline-variant/20 h-fit sticky top-24">
+                    <span class="font-label text-[10px] tracking-widest text-secondary mb-2 block uppercase text-center">Send a Message</span>
+                    <h3 class="font-headline text-3xl text-primary mb-8 text-center">Enquiry Form</h3>
+                    
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Full Name</label>
+                            <input type="text" id="contactName" required placeholder="Your Name" class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary placeholder:text-outline-variant/50"/>
+                        </div>
+                        <div>
+                            <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Phone Number</label>
+                            <input type="tel" id="contactPhone" required placeholder="+91 XXXXX XXXXX" class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary placeholder:text-outline-variant/50"/>
+                        </div>
+                        <div>
+                            <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Subject</label>
+                            <select id="contactSubject" required class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary cursor-pointer">
+                                <option value="" disabled selected>Select enquiry type</option>
+                                <option>Room Booking</option>
+                                <option>Group Booking</option>
+                                <option>Cancellation / Refund</option>
+                                <option>Travel Assistance</option>
+                                <option>General Enquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="font-label text-[10px] text-outline uppercase tracking-widest block mb-2">Message</label>
+                            <textarea id="contactMessage" required rows="4" placeholder="How can we help you?" class="w-full bg-surface-container border-none rounded-lg p-4 font-body text-sm focus:ring-secondary text-primary placeholder:text-outline-variant/50 resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-on-primary py-5 rounded-lg font-bold tracking-[0.2em] text-xs shadow-lg hover:opacity-90 transition-opacity uppercase mt-4">Send via WhatsApp <span class="material-symbols-outlined align-middle ml-2 text-sm">send</span></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section class="py-24 px-6 md:px-12 bg-surface">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12 space-y-4">
+                    <span class="font-label text-secondary tracking-[0.3em] font-bold text-xs uppercase">Find Us</span>
+                    <h3 class="font-headline text-4xl text-primary italic letterpress">Hotel Location</h3>
+                </div>
+                <div class="w-full h-[400px] rounded-xl overflow-hidden shadow-[0px_24px_48px_-12px_rgba(94,48,10,0.08)] border border-outline-variant/20">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.0!2d73.2682!3d18.9925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2sMatheran!5e0!3m2!1sen!2sin!4v1" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest text-primary w-full py-16 px-8 mt-auto flex flex-col space-y-12 items-center text-center border-t ghost-border shadow-[0px_-5px_20px_rgba(94,48,10,0.02)] relative z-10">
+        <div class="space-y-4">
+            <span class="font-headline text-3xl font-bold tracking-[0.2em] block text-primary">WESTEND</span>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-8">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 text-on-surface-variant">
+                <div class="flex flex-col items-center gap-1">
+                    <span class="font-label text-[10px] tracking-widest uppercase font-bold text-primary">Hotel Location</span>
+                    <span class="text-xs">R.C.Church Road, Next to Matheran Police Station<br>Matheran, Maharashtra 410102</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                    <span class="font-label text-[10px] tracking-widest uppercase font-bold text-primary">Agency Contact (Sonu)</span>
+                    <span class="text-xs">Email: support@westendmatheran.com<br>Phone: +91 8198928659</span>
+                </div>
+            </div>
+            <div class="bg-surface-container-low p-6 rounded-lg border border-outline-variant/10">
+                <p class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest leading-loose">
+                    <strong>Disclaimer:</strong> This website is operated by <strong>Sonu</strong>, an independent private travel agency. We are <strong>NOT</strong> affiliated with or the official website of Westend Hotel. We act as an authorized booking partner, and prices may include agency service fees.
+                </p>
+            </div>
+        </div>
+        <div class="pt-8 border-t border-outline-variant/30 w-full max-w-lg flex flex-col justify-center gap-6">
+            <div class="flex justify-center flex-wrap gap-x-8 gap-y-4 font-label text-[10px] uppercase tracking-widest font-bold">
+                <a href="privacy-policy.html" class="text-on-surface-variant hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="terms-and-conditions.html" class="text-on-surface-variant hover:text-primary transition-colors">Terms & Conditions</a>
+                <a href="refund-policy.html" class="text-on-surface-variant hover:text-primary transition-colors">Refund & Cancellation</a>
+            </div>
+            <p class="font-label text-[10px] text-outline-variant uppercase tracking-[0.2em]">Copyright © 2026 Westend Hotel Matheran | Operated by Sonu</p>
+        </div>
+    </footer>
+
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="md:hidden fixed bottom-0 left-0 w-full glass-header flex justify-around items-center px-4 pb-6 pt-3 z-50 rounded-t-xl border-t border-outline-variant/20 shadow-[0_-10px_30px_-15px_rgba(94,48,10,0.1)]">
+        <a href="index.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+            <span class="material-symbols-outlined mb-1">home</span>
+            <span class="font-label text-[8px] uppercase tracking-widest font-bold">HOME</span>
+        </a>
+        <a href="rooms.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+            <span class="material-symbols-outlined mb-1">bed</span>
+            <span class="font-label text-[8px] uppercase tracking-widest font-bold">ROOMS</span>
+        </a>
+        <a href="about.html" class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-colors cursor-pointer">
+            <span class="material-symbols-outlined mb-1">info</span>
+            <span class="font-label text-[8px] uppercase tracking-widest font-bold">ABOUT</span>
+        </a>
+        <a href="contact.html" class="flex flex-col items-center justify-center text-primary group cursor-pointer translate-y-[-2px]">
+            <span class="material-symbols-outlined mb-1">mail</span>
+            <span class="font-label text-[8px] uppercase tracking-widest font-bold">CONTACT</span>
+        </a>
+    </nav>
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-24 right-6 md:bottom-12 md:right-12 z-[90] flex flex-col gap-4">
+        <a href="https://wa.me/918198928659" target="_blank" class="w-12 h-12 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(37,211,102,0.3)] hover:-translate-y-1 transition-transform group relative z-10">
+            <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">WhatsApp</span>
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.031 0C5.385 0 0 5.386 0 12.035c0 2.126.551 4.197 1.6 6.02L.034 23.996l6.095-1.598A11.96 11.96 0 0012.03 24c6.647 0 12.032-5.384 12.032-12.035S18.679 0 12.031 0zm.002 21.993c-1.802 0-3.564-.486-5.111-1.402l-.367-.217-3.791.994.995-3.69-.234-.374a9.927 9.927 0 01-1.554-5.31C1.97 6.452 6.449 1.972 12.033 1.972c5.584 0 10.063 4.48 10.063 10.065 0 5.586-4.48 10.065-10.063 10.065z"/><path d="M17.514 14.192c-.302-.151-1.78-.88-2.056-.98-.276-.1-.476-.151-.676.151-.201.301-.776.98-.952 1.18-.175.2-.35.226-.653.076-1.5-.751-2.613-1.638-3.616-3.085-.258-.372.253-.346.84-.925.151-.15.302-.349.452-.525.151-.176.201-.301.302-.501.1-.2.05-.375-.025-.525-.075-.152-.676-1.628-.925-2.227-.243-.585-.491-.505-.676-.514-.176-.008-.376-.008-.577-.008s-.525.076-.801.376c-.276.3-.952.924-.952 2.254s.977 2.611 1.127 2.811c.151.201 1.914 2.923 4.634 4.097 1.83 1.042 2.508.889 3.01.738.647-.193 1.78-.727 2.03-1.428.252-.7.252-1.302.177-1.428-.076-.126-.276-.201-.577-.352z"/></svg>
+        </a>
+        <a href="tel:+918198928659" class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary shadow-[0px_10px_20px_rgba(65,28,0,0.3)] hover:-translate-y-1 transition-transform group relative border border-secondary/20 z-10">
+            <span class="absolute right-full mr-4 bg-surface-container-high text-primary px-3 py-1 rounded-md text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-md">Call Us</span>
+            <span class="material-symbols-outlined text-xl">call</span>
+        </a>
+    </div>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const phone = document.getElementById('contactPhone').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+            
+            const waMessage = `Hello! I'm reaching out via the Westend Hotel website.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+            
+            window.open(`https://wa.me/918198928659?text=${waMessage}`, '_blank');
+        });
+    </script>
+</body>
+</html>
